@@ -2,12 +2,17 @@
 
 ## Must-Haves
 
-> these are necessary for basic usability
+- Display a list of tasks and add new tasks.
+- Implement task completion using checkboxes.
+- Apply user-friendly styles and responsiveness.
 
 ## Should-Haves
 
-> these will complete the user experience, but are not necessary
+- Edit, delete, and categorize tasks.
 
 ## Could-Haves
 
-> would be really cool ... if there's time
+- User accounts, due dates, and reminders.
+- Drag-and-drop and sharing tasks.
+
+

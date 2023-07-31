@@ -1,2 +1,6 @@
-const data = {};
-console.log('Let us build a tod list');
+import { initializeEventListeners } from './events/initializeEventListeners.js';
+
+window.addEventListener('load', initializeEventListeners);
+  
+
+

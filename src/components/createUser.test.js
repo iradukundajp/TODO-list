@@ -2,14 +2,30 @@
  * @jest-environment jsdom
  */
 
-import createUser from './createUser.js';
+import createTaskElement from './createUser.js';
 
-describe('create a user component ', () => {
-    test('name -> John', () => {
-        const user = createUser({ name: 'John' });
-        expect(user.nodeName).toEqual('DIV');
-        expect(user.childElementCount).toEqual(1);
-        expect(user.children[0].nodeName).toEqual('H4');
-        expect(user.children[0].innerText).toEqual('John');
-    });
-});
+function testCreateTaskElement() {
+    const taskText = 'Sample Task';
+    const taskElement = createTaskElement(taskText);
+
+    console.assert(
+        taskElement.querySelector('.text').value === taskText,
+        'Task text value should match.'
+    );
+    console.assert(
+        taskElement.querySelector('.text').readOnly === true,
+        'Task input should be read-only.'
+    );
+    console.assert(
+        taskElement.querySelector('.edit').innerText === 'Edit',
+        'Edit button should have text "Edit".'
+    );
+    console.assert(
+        taskElement.querySelector('.delete').innerText === 'Delete',
+        'Delete button should have text "Delete".'
+    );
+
+    console.log('createTaskElement test passed.');
+}
+
+testCreateTaskElement();
